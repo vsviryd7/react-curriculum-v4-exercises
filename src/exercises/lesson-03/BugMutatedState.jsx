@@ -26,3 +26,6 @@ export default function BugMutatedState() {
 
 // Explanation:
 // (Write your explanation here)
+/* count++ changes the value directly, so React doesn’t see it.
+React only listens to setCount, not normal changes.
+Using setCount(count + 1) updates the UI correctly.*/

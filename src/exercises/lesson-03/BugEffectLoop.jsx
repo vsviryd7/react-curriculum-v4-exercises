@@ -24,5 +24,5 @@ export default function BugEffectLoop() {
 // (Write your explanation here)
 /*The useEffect runs every time because it didn’t have [].
 setCount changes the state and makes the component render again.
-This creates a loop.
+This creates a infinity loop.
 Adding [] makes it run only one time when the component loads.*/ 
