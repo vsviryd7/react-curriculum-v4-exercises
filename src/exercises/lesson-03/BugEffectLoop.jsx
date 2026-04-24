@@ -15,10 +15,14 @@ export default function BugEffectLoop() {
 
   useEffect(() => {
     setCount(count + 1);
-  });
+  }, []); // Add [] here to fix the issue
 
   return <p>Bug 1 Count: {count}</p>;
 }
 
 // Explanation:
 // (Write your explanation here)
+/*The useEffect runs every time because it didn’t have [].
+setCount changes the state and makes the component render again.
+This creates a loop.
+Adding [] makes it run only one time when the component loads.*/ 
