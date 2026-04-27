@@ -15,7 +15,7 @@ export default function BugEffectLoop() {
 
   useEffect(() => {
     setCount(count + 1);
-  }, []); // Add [] here to fix the issue
+  }, []); 
 
   return <p>Bug 1 Count: {count}</p>;
 }
