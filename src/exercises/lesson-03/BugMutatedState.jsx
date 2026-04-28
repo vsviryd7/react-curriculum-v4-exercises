@@ -10,11 +10,10 @@
 
 import { useState } from 'react';
 export default function BugMutatedState() {
-  let [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
   function handleAdd() {
-    count++;
-    setCount(count);
+    setCount(count + 1);
   }
 
   return (
@@ -27,3 +26,6 @@ export default function BugMutatedState() {
 
 // Explanation:
 // (Write your explanation here)
+/* count++ changes the value directly, so React doesn’t see it.
+React only listens to setCount, not normal changes.
+Using setCount(count + 1) updates the UI correctly.*/
